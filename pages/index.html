@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title>Frames Test</title>
+  <style>
+   .menu {
+      float:left;
+      width:20%;
+      height:80%;
+    }
+    .mainContent {
+      float:left;
+      width:75%;
+      height:80%;
+    }
+  </style>
+</head>
+<body>
+	<div align="center">	
+		<h1>Clusters</h1>
+	</div>
+
+  <iframe class="menu" src="list.html"></iframe>
+  <iframe id = "main" class="mainContent"></iframe>
+	<script>
+	function get(name){
+   		if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
+      		return decodeURIComponent(name[1]);
+		else
+			return "";
+	}
+	//alert(get('na'));
+	document.getElementById("main").src= get('l');
+	</script>
+
+</body>
+</html>
+
